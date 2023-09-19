@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Letter Grabber MECA CUCSUR</string>
+    <string name="clear">Limpiar</string>
+    <string name="capture">Capturar</string>
+    <string name="predict">P</string>
+
+    <string name="grade">Promedio</string>
+    <string name="name">Nombre</string>
+    <string name="studentCode">Codigo</string>
+    <string name="instructions">Dibuja una letra</string>
+    <string name="createdBy">Created by Alejandro García Villalvazo</string>
+</resources>
