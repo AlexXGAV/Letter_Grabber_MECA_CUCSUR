@@ -55,59 +55,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameEditText"
         app:layout_constraintVertical_bias="0.1" />
+    <!--
+        <EditText
+            android:id="@+id/studentCodeEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/studentCode"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gradeEditText"
+            app:layout_constraintVertical_bias="0.12" />
+    -->
+        <TextView
+            android:id="@+id/createdBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/createdBy"
+            app:layout_constraintBottom_toTopOf="@+id/capture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gradeEditText"
+            app:layout_constraintVertical_bias="0.482" />
 
-    <EditText
-        android:id="@+id/studentCodeEditText"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/studentCode"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradeEditText"
-        app:layout_constraintVertical_bias="0.12" />
-
-    <TextView
-        android:id="@+id/createdBy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/createdBy"
-        app:layout_constraintBottom_toTopOf="@+id/capture"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentCodeEditText"
-        app:layout_constraintVertical_bias="0.482" />
-
-    <Button
-        android:id="@+id/capture"
-        android:layout_width="117dp"
-        android:layout_height="47dp"
-        android:text="@string/capture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/studentCodeEditText"
-        app:layout_constraintVertical_bias="0.666"
-        android:backgroundTint="@color/green"
-        />
-<!--
-    <Button
-        android:id="@+id/predict"
-        android:layout_width="40dp"
-        android:layout_height="47dp"
-        android:backgroundTint="@color/blue_A700"
-        android:text="@string/predict"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/studentCodeEditText"
-        app:layout_constraintVertical_bias="0.669" />
--->
+        <Button
+            android:id="@+id/capture"
+            android:layout_width="117dp"
+            android:layout_height="47dp"
+            android:text="@string/capture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gradeEditText"
+            app:layout_constraintVertical_bias="0.666"
+            android:backgroundTint="@color/green"
+            />
+    <!--
+        <Button
+            android:id="@+id/predict"
+            android:layout_width="40dp"
+            android:layout_height="47dp"
+            android:backgroundTint="@color/blue_A700"
+            android:text="@string/predict"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studentCodeEditText"
+            app:layout_constraintVertical_bias="0.669" />
+    -->
     <Button
         android:id="@+id/clear"
         android:layout_width="117dp"
@@ -117,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentCodeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/gradeEditText"
         app:layout_constraintVertical_bias="0.666"
         android:backgroundTint="@color/red"/>
 
