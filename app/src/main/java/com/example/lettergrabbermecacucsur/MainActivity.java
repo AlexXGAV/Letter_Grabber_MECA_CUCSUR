@@ -244,25 +244,29 @@ public class MainActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_EXTERNAL_STORAGE);
     }
 
-    private void saveDataToFile(String name, String grade, String studentCode) {
+    private void saveDataToFile(String name, String grade) {
         if (checkPermission()) {
-            DateFormat df = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
-            String date = df.format(Calendar.getInstance().getTime());
 
-            String fileName = name.toUpperCase() + "+" + grade + "-" + studentCode.toUpperCase() + "-" + date + ".txt";
-            File folder = new File(getExternalFilesDir(null), "Data/"); //+name.toUpperCase()+"-"+grade
-            folder.mkdirs();
-
-            File file = new File(folder, fileName);
             try {
-                file.createNewFile();
-
-                //long currentTime = System.currentTimeMillis();
-                StringBuilder content = new StringBuilder();
-                content.append("Time,X,Y,P\n");
-                //Log.d("TAG", "Tamaño coordenadas: " + coordinates.size() + " Tamaño tiempo: " + timeOffsets.size());
 
                 if (timeOffsets.size()!=0){
+
+                    DateFormat df = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
+                    String date = df.format(Calendar.getInstance().getTime());
+
+                    String fileName = name.toUpperCase() + "+" + grade + "-" + date + ".txt";//+ "-" + studentCode.toUpperCase()
+                    File folder = new File(getExternalFilesDir(null), "Data/"); //+name.toUpperCase()+"-"+grade
+                    folder.mkdirs();
+
+                    File file = new File(folder, fileName);
+                    file.createNewFile();
+
+                    //long currentTime = System.currentTimeMillis();
+                    StringBuilder content = new StringBuilder();
+                    content.append("Time,X,Y,P\n");
+                    //Log.d("TAG", "Tamaño coordenadas: " + coordinates.size() + " Tamaño tiempo: " + timeOffsets.size());
+
+
                     // Obtén el primer tiempo en milisegundos
                     long firstTime = timeOffsets.get(0);
 
@@ -317,18 +321,18 @@ public class MainActivity extends AppCompatActivity {
     private void captureData() {
         EditText nameEditText = findViewById(R.id.nameEditText);
         EditText gradeEditText = findViewById(R.id.gradeEditText);
-        EditText studentCodeEditText = findViewById(R.id.studentCodeEditText);
+        //EditText studentCodeEditText = findViewById(R.id.studentCodeEditText);
 
         String name = nameEditText.getText().toString().trim();
         String grade = gradeEditText.getText().toString().trim();
-        String studentCode = studentCodeEditText.getText().toString().trim();
+        //String studentCode = studentCodeEditText.getText().toString().trim();
 
-        if (name.isEmpty() || grade.isEmpty() || studentCode.isEmpty()) {
+        if (name.isEmpty() || grade.isEmpty()) {//studentCode.isEmpty()
             Toast.makeText(this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        saveDataToFile(name, grade, studentCode);
+        saveDataToFile(name, grade);
 
     }
 
