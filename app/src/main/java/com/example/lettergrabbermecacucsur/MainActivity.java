@@ -295,11 +295,18 @@ public class MainActivity extends AppCompatActivity {
                     //toast.show();
 
                     //Toast.makeText(this, , Toast.LENGTH_SHORT).show();
+                    EditText nameEditText = findViewById(R.id.nameEditText);
+                    EditText gradeEditText = findViewById(R.id.gradeEditText);
                     adjustedTimeOffsets.clear();
                     drawingView.clearDrawing();
                     coordinates.clear();
                     timeOffsets.clear();
                     pressures.clear();
+                    // Para borrar el texto en el EditText "nameEditText"
+                    nameEditText.setText("");
+
+// Para borrar el texto en el EditText "gradeEditText"
+                    gradeEditText.setText("");
                 }else{
                     Toast.makeText(this, "Ningún dato guardado (Dibuja una letra).", Toast.LENGTH_SHORT).show();
                 }
